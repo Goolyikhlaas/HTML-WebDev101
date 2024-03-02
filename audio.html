@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio</title>
+    <meta charset="UTF-8"> <!-- Specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets the viewport to the width of the device and initial scale to 1.0 -->
+    <title>Audio</title> <!-- Sets the title of the web page -->
 </head>
 <body>
-    <audio controls src="AUDIO/Bali .mp3">
+    <!--
+        The <audio> element is used to embed audio content in a document.
+        The 'controls' attribute adds audio controls (play, pause, volume, etc.) to the audio player.
+        The 'src' attribute specifies the URL of the audio file.
+
+        If the browser does not support the <audio> element or the specified audio format, it will use the fallback content between the <audio> and </audio> tags. This can be a text message or a link to download the audio file.
+    -->
+    <audio controls loop src="AUDIO/Bali .mp3">
+        <!-- Fallback content for browsers that do not support the <audio> element or the specified audio format -->
+        Your browser does not support the audio element for MP3 format. <!-- A message for browsers that do not support MP3 -->
+        Please try a different audio format. <!-- Additional message -->
+    </audio>
+
+    <br><br>
+
+    <audio controls autoplay loop muted preload="auto" src="AUDIO/Bali .ogg">
+        <!-- Fallback content for browsers that do not support the <audio> element or the specified audio format -->
+        Your browser does not support the audio element for OGG format. <!-- A message for browsers that do not support OGG -->
+        Please try a different audio format. <!-- Additional message -->
+    </audio>
+
+    <br><br>
+
+    <audio controls muted preload="metadata" src="AUDIO/Bali .wav">
+        <!-- Fallback content for browsers that do not support the <audio> element or the specified audio format -->
+        Your browser does not support the audio element for WAV format. <!-- A message for browsers that do not support WAV -->
+        Please try a different audio format. <!-- Additional message -->
     </audio>
 </body>
 </html>
